@@ -1,0 +1,14 @@
+<header class="template-header">
+
+	<div class="container">
+		{{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png'), "showTplWidget":"0"})|raw}}
+		{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        
+        <div class="header-extendednavigation">
+		  {{widget('extendednavigation', 'header-nav', {"align":"right"})|raw}}
+            {{widget('ecombasket', 'shopbasket', {})|raw}}
+        </div>
+
+	</div>
+
+</header>

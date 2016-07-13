@@ -1,0 +1,87 @@
+
+.slideshow-home .responsiveslideshow {
+
+    .slides-list {
+        height: 650px;
+        height: 100vh;
+    }
+
+    .figure {
+        .flex-display(flex);
+        .justify-content(flex-start);
+    }
+
+    .caption {
+        .align-self(center);
+        background-color: fade(black, 30%);
+        padding: 25px 30px;
+        position: relative;
+        left: 35px;
+        max-width: 680px;
+        text-align: left;
+        width: auto;
+
+        @media @mobile-650px {
+            left: 25px;
+            top: -25px;
+        }
+    }
+
+    .slide-navigation {
+        background-color: fade(black, 30%);
+        position: absolute;
+        height: 60px;
+        width: 180px;
+        left: 35px;
+        top: 30px;
+    }
+
+    .slide-navigation .pause-toggle-only {
+        background-color: transparent;
+        width: 60px;
+    }
+
+    .slide-pagination {
+        background-color: fade(black, 30%);
+        padding: 8px 8px 3px 12px;
+        right: 35px;
+        top: 35px;
+
+        @media @mobile-650px {
+            left: 25px;
+            right: initial;
+        }
+    }
+
+    .pagination-item {
+        display: inline-block;
+        line-height: 0;
+        padding-right: 4px;
+    }
+
+    .next-button,
+    .previous-button {
+        height: 15px;
+        width: 15px;
+    }
+
+    .previous-button {
+        left: 26px;
+    }
+
+    .next-button {
+        right: 27px;
+    }
+}
+
+.template-header {
+    background-color: @color__header--background;
+    top: 0;
+    padding: 25px 30px;
+    position: absolute;
+
+    @media @mobile-650px {
+        padding: 25px;
+    }
+}
+

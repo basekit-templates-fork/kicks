@@ -1,2 +1,2 @@
-# kicks
-Basekit V8 Template Fork
+# visby
+Visby BaseKit Template (based off Odense)
