@@ -92,6 +92,7 @@ body {
     }
     @media @mobile {
         margin-top: -50px;
+        text-align: center;
     }
 }
 
@@ -550,6 +551,7 @@ button,
 
 .navigation-item {
     .item-name {
+        padding: 14px 0 14px 14px;
         &:hover {
             &:before {
                 border-top: 15px solid transparent;
@@ -559,10 +561,16 @@ button,
                 height: 0;
                 position: absolute;
                 width: 0;
-                right: -18%;
+                right: -19%;
                 top: 16%;
             }
         }
+    }
+}
+
+.extendednavigation__navigation-item {
+    &:last-child {
+        margin-bottom: 10px;
     }
 }
 
