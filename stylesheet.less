@@ -297,7 +297,7 @@ button,
         .justify-content(flex-start);
         margin: 0 auto;
         position: relative;
-        max-height: 100px;
+        max-height: 100%;
 
         @media @tablet-860px  {
             .flex-wrap(nowrap);
@@ -363,6 +363,10 @@ button,
     .navigation-item.folder span.item-name:after {
         color: @color__navigation--text--hover;
     }
+
+    .navigation-item .item-name:hover:before {
+        display: none;
+    }
 }
 
 
@@ -390,6 +394,7 @@ button,
     .container {
         margin: 0;
         max-width: 100%;
+        max-height: 100px;
 
          @media @mobile-650px {
             margin: 0;
