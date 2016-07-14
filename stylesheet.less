@@ -282,6 +282,10 @@ button,
         padding: 20px 0 20px 25px;
     }
 
+    .navigation-item {
+        display: inline-block
+    }
+
 
     // Header container
     .container {
@@ -324,27 +328,6 @@ button,
         }
     }
 
-    // Header Flexbox
-    [data-widget-type="logo"] {
-        .flex-order(@order: 0);
-        .flex(@columns: 0 1 auto);
-        .align-self(@align: flex-start);
-    }
-
-    [data-widget-type="companyname"] {
-        .flex-order(@order: 1);
-        .flex(@columns: 1 1 auto);
-        .align-self(@align: flex-start);
-    }
-
-    .header-extendednavigation {
-        .flex-order(@order: 3);
-        .flex(@columns: 0 0 auto);
-        .align-self(@align: flex-start);
-
-        float: right;
-    }
-
     // Companyname styling
     [data-widget-type="companyname"] {
         @media @tablet-860px  {
@@ -354,6 +337,7 @@ button,
 
     .companyname {
         line-height: 0;
+        padding-top: 5px;
     }
 
     // Company name colour
@@ -366,18 +350,18 @@ button,
 
     // Navigation items
     .navigation-item.selected .item-name {
-        color: @color__navigation--text;
+        color: @color__navigation--text--hover;
     }
 
     .navigation-toggle,
     .navigation-toggle:before,
     .navigation-toggle:after {
-        background-color: @color__navigation--text;
+        background-color: @color__navigation--text--hover;
     }
 
     .navigation-item .item-name,
     .navigation-item.folder span.item-name:after {
-        color: @color__navigation--text;
+        color: @color__navigation--text--hover;
     }
 }
 
@@ -412,6 +396,31 @@ button,
         }
     }
 
+        // Header Flexbox
+    [data-widget-type="logo"] {
+        .flex-order(@order: 0);
+        .flex(@columns: 0 1 auto);
+        .align-self(@align: flex-start);
+    }
+
+    [data-widget-type="companyname"] {
+        .flex-order(@order: 1);
+        .flex(@columns: 1 1 auto);
+        .align-self(@align: flex-start);
+    }
+
+    .header-extendednavigation {
+        .flex-order(@order: 3);
+        .flex(@columns: 0 0 auto);
+        .align-self(@align: flex-start);
+
+        float: right;
+    }
+
+    .navigation-item {
+        display: block;
+    }
+
     // Companyname colour when overlayed
     .company-link {
         color: @color__companyname--text;
@@ -436,6 +445,9 @@ button,
                 color: @color__navigation--text--hover;
 
             }
+            @media @tablet {
+                color: @color__navigation--text--hover;
+            }
         }
 
         // Folder navigation colour
@@ -451,8 +463,8 @@ button,
         &.folder span.item-name:after {
             color: @color__navigation--text;
 
-             @media @tablet-860px {
-                color: fade(@color__navigation--text, 75%);
+             @media @tablet {
+                color: @color__navigation--text--hover;
             }
         }
     }
@@ -475,6 +487,9 @@ button,
     }
 }
 
+.bk-tpl-hidden {
+    display: none;
+}
 
 
 // Navigation Styles For Default Pages
@@ -488,7 +503,6 @@ button,
 
 // Universal navigation styling
 .navigation-item {
-    display: block;
 
     &:hover .navigation-list--children {
         display: none;
@@ -1293,7 +1307,7 @@ div[role="main"] {
     a,
     .headline,
     .strapline {
-        color: lighten(@color__footer--background, 25%);
+        color: lighten(@color__footer--background, 35%);
     }
 
     // Keep footer widgets vertically aligned

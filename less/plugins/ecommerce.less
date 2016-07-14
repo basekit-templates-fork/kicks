@@ -33,6 +33,12 @@
 	float: right;
 	.transition(width 0.35s ease-in-out);
 
+	.item-count {
+		@media @tablet {
+			color: @color__navigation--text--hover;
+		}
+	}
+
 	@media @tablet-860px {
 		background-color: @color-swatch1;
 		display: block;
@@ -163,8 +169,8 @@
     	background-position: 17px 10px;
 		background-size: 15px;
 		border-top: none;
-		color: @font-swatch6-color;
-		width: 135px;
+		color: @font-swatch6-color-hover;
+		text-indent: 0;
 	}
 }
 
@@ -211,9 +217,19 @@ button.basket-toggle {
 	height: 50px;
 	background-position: 17px 15px;
 	background-color: @color-swatch1;
+	&:hover {
+		background-color: @color-swatch1;
+	}
 
 	&.icon--basket:before {
 		display: none;
+	}
+}
+
+.nav-open button.basket-toggle {
+		@media @tablet {
+		background-position: 21px 14px!important;
+		text-indent: 50px;
 	}
 }
 
