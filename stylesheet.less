@@ -57,6 +57,9 @@
 body {
     background-color: @color__body--background;
     padding: 15px;
+    @media @mobile {
+        padding: 0;
+    }
 }
 
 
@@ -589,12 +592,6 @@ button,
                 top: 16%;
             }
         }
-    }
-}
-
-.extendednavigation__navigation-item {
-    &:last-child {
-        margin-bottom: 10px;
     }
 }
 
