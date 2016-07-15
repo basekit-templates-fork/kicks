@@ -49,7 +49,10 @@
 
     <div class="home-profile-widget">
         
-        {{widget('profile', 'home-social-icons', { 'profileType':'socialicons'})|raw}}
+        {{widget('socialicons', 'socialnetworks', {
+          'linkedin':'http://www.linkedin.com/company/mycompanyname',
+          'facebook': 'https://www.facebook.com/mycompanyname'
+        })|raw}}
         
     </div>
 
