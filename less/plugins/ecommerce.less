@@ -202,7 +202,7 @@
 	}
 }
 
-	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	.blogpost-page,
 	.slideshow-home {
 		button.basket-toggle,
@@ -212,6 +212,11 @@
 		}
 	}
 }
+
+.blogpost-page.has-image .template-header .navigation-item.selected .item-name,
+.blogpost-page.has-image .template-header .navigation-item .item-name:hover {
+	color: @font-swatch6-color;
+} 
 
 button.basket-toggle,
 .basket-open .bk-selected .basket-toggle,
