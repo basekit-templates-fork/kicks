@@ -149,6 +149,15 @@
 	}
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.blogpost-page,
+	.slideshow-home {
+		.basket-open button.basket-toggle {
+			background-image: image('/images/basket-icon.png');
+		}
+	}
+}
+
 .basket-open button.basket-toggle {
 	background-color: @font-swatch6-background-color;
 	color: @font-swatch6-color-hover;
@@ -158,6 +167,14 @@
 	&:hover {
 		background-color: @font-swatch6-background-color;
 		color: @font-swatch6-color-hover;
+	}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.basket-open.nav-open button.basket-toggle {
+		@media @tablet-860px {
+			background-image: image('/images/basket-icon.png');
+		}
 	}
 }
 
@@ -172,6 +189,17 @@
 		border-top: none;
 		color: @font-swatch6-color-hover;
 		text-indent: 0;
+	}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.blogpost-page,
+	.slideshow-home {
+		button.basket-toggle,
+		.basket-open .bk-selected .basket-toggle,
+		.bk-selected .basket-toggle {
+			background-image: image('/images/basket-icon-white.png');
+		}
 	}
 }
 
@@ -213,6 +241,14 @@ button.basket-toggle,
 	}
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	button.basket-toggle,
+	.basket-open .bk-selected .basket-toggle,
+	.bk-selected .basket-toggle {
+		background-image: image('/images/basket-icon.png');
+	}
+}
+
 button.basket-toggle {
 	width: 50px;
 	height: 50px;
@@ -228,7 +264,7 @@ button.basket-toggle {
 }
 
 .nav-open button.basket-toggle {
-		@media @tablet {
+	@media @tablet-860px {
 		background-position: 21px 14px!important;
 		text-indent: 50px;
 	}
@@ -251,6 +287,17 @@ button.basket-toggle {
 		color: @font-swatch6-background-color;
 		padding-left: 40px;
 		right: 25px;
+		left: 30%;
+	}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.nav-open button.basket-toggle,
+	.basket-open.nav-open .bk-selected .basket-toggle,
+	.nav-open .bk-selected .basket-toggle {
+		@media @tablet-860px {
+			background-image: image('/images/basket-icon-white.png');
+		}
 	}
 }
 
