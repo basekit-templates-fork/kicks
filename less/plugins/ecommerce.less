@@ -57,6 +57,7 @@
 
 // Ecom basket overlay
 [data-widget-type="ecombasket"] .widget-overlay {
+	height: 50px;
 	@media @tablet-860px {
 		bottom: 13px;
 	    right: 25px;
@@ -67,6 +68,10 @@
 	    width: 137px;
 	    z-index: 10002;
 	}
+}
+
+[data-widget-type="ecombasket"] .bk-tpl-hidden-mask:before {
+	height: 50px;
 }
 
 .basket-open .ecombasket {
