@@ -1,8 +1,9 @@
- // Toggles class open to display/hide folders
-$( ".navigation-item.folder .item-name--parent" ).each(function() {
-	$( this ).click(function() {
-		$( this ).parent( ".navigation-item.folder" ).toggleClass( "open" );
-	});
+
+
+// Drop down menu click
+$(document).on('mq4hsChange', function (e) {
+    console.log(e);
+    $(document.documentElement).toggleClass('no-touch', e.trueHover);
 });
 
 
