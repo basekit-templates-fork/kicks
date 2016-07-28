@@ -47,7 +47,17 @@
 //  2. Theme Styles
 // -----------------------------
 
+// Default Page
+// ---------------
 
+.default-page {
+    .navigation-item .item-name:hover:before {
+        display: none;
+    }
+    .navigation-item .item-name:hover {
+        color: darken(@color__navigation--text--hover, 20%);
+    }
+}
 
 // Global
 // ---------------
@@ -452,7 +462,7 @@ button,
         .item-name {
             color: @color__navigation--text;
             font-size: bkscale(@font__navigation--font-size, 0.95);
-            line-height: bkscale(@font__navigation--font-size, 1);
+            line-height: bkscale(@font__navigation--line-height, 0.95);
 
             // hover navigation colour
             &:hover {
@@ -616,6 +626,7 @@ ul.navigation-list--children {
 .navigation-list {
     height: 100%;
     margin: 0;
+    min-width: 200px;
 }
 
 div[data-widget-type="extendednavigation"] {
