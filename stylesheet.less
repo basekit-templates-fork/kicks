@@ -626,6 +626,12 @@ ul.navigation-list--children {
     position: absolute;
 }
 
+// Navigation dropdown alignment
+.extendednavigation.align-right .navigation-list--children {
+   left: inherit;
+   right: 0;
+}
+
 .navigation-list {
     height: 100%;
     margin: 0;
@@ -635,7 +641,6 @@ ul.navigation-list--children {
 div[data-widget-type="extendednavigation"] {
     .flex(1 1 auto);
     position: relative;
-    margin-bottom: 10px;
 }
 
 @media @tablet-860px {
@@ -873,6 +878,7 @@ div[data-widget-type="extendednavigation"] {
     &.folder-open .navigation-list--children {
         display: block;
         width: 100%;
+        margin-top: 0!important;
     }
 }
 
