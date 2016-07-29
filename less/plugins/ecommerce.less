@@ -507,6 +507,10 @@ button.basket-toggle {
 //  1. Ecommerce Search
 // -----------------------------
 
+// Legend
+.ecomproductslist__legend {
+	display: none;
+}
 
 // Product Search
 .fieldset--search {
@@ -589,6 +593,9 @@ button.basket-toggle {
         &:hover {
         	background-color: transparent;
         }
+    }
+    @media (min-width:860px) and (max-width:922px) { 
+    	margin-right: 10px;
     }
 }
 
@@ -944,10 +951,6 @@ form.ecomproductslist__form {
     .product-item {
     	padding-left: 24px!important;
         width: 100%!important;
-    }
-    .ecomproductslist__legend {
-    	margin-bottom: 0;
-    	padding-top: 20px;
     }
     .product-filters .form-group {
     	margin-right: 0;

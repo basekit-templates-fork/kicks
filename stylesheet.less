@@ -391,7 +391,7 @@ button,
 }
 
 .feature-home [data-widget-type="feature"].bk-tpl-hidden + .template-header {
-        .navigation-item .item-name:hover:before {
+    .navigation-item .item-name:hover:before {
         display: none;
     }
 }
@@ -794,12 +794,6 @@ div[data-widget-type="extendednavigation"] {
                border: none;
             }
 
-            &.folder ul {
-                display: none;
-                padding-top: 0;
-                text-align: inherit;
-            }
-
             &.folder.open ul {
                 display: block;
             }
@@ -836,6 +830,46 @@ div[data-widget-type="extendednavigation"] {
         height: 100%!important;
         width: 75%!important;
         z-index: 99999!important;
+    }
+}
+
+
+
+
+// Touch detection folder styling
+// --------------------------------
+
+
+// On devices without touch enabled, hover events will work as normal
+.no-touch {
+    .extendednavigation .navigation-item {
+
+       // Hides JS toggle open
+        &.folder-open .navigation-list--children {
+            display: none;
+        }
+      
+        // Activates hover state open
+        &:hover .navigation-list--children {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+
+// On devices with touch enabled, hover is disabled and the JS toggle (.folder-open) is used
+.extendednavigation .navigation-item {
+  
+    // Hides hover state
+    &:hover .navigation-list--children {
+        display: none;
+    }
+
+    // Activates JS toggle open
+    &.folder-open .navigation-list--children {
+        display: block;
+        width: 100%;
     }
 }
 
