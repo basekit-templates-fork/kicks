@@ -785,6 +785,7 @@ div[data-widget-type="extendednavigation"] {
         .navigation-list {
             margin-top: 65px;
             -ms-overflow-style: none;
+            overflow-y: scroll;
             position: static;
             top: 0;
             left: initial;
@@ -837,9 +838,11 @@ div[data-widget-type="extendednavigation"] {
         z-index: 99999!important;
     }
 }
-
-
-
+.navigation-body .navigation-list {
+            @media @landscape-922px {
+                height: 100%;
+            }
+        }
 
 // Touch detection folder styling
 // --------------------------------
@@ -876,6 +879,9 @@ div[data-widget-type="extendednavigation"] {
         display: block;
         width: 100%;
         margin-top: 0!important;
+        @media @landscape-922px {
+            height: 100%;
+        }
     }
 }
 
