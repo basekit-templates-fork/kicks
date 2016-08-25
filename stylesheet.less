@@ -86,6 +86,7 @@
         align-self: auto;
 
         margin-right: 10px;
+        margin-bottom: 0;
     }
 
     div[data-widget-type="ecombasket"] {
@@ -412,7 +413,6 @@ button,
 
     .companyname {
         line-height: 0;
-        padding-top: 5px;
     }
 
     // Company name colour
@@ -517,7 +517,6 @@ button,
         .item-name {
             color: @color__navigation--text;
             font-size: bkscale(@font__navigation--font-size, 0.95);
-            line-height: bkscale(@font__navigation--line-height, 0.95);
 
             // hover navigation colour
             &:hover {
@@ -691,11 +690,14 @@ ul.navigation-list--children {
 
 div[data-widget-type="extendednavigation"] {
     .flex(1 1 auto);
+
     position: relative;
+    margin-bottom: 10px;
 }
 
 div[data-widget-type="ecombasket"] {
     .flex(1 1 auto);
+
     position: relative;
 }
 
