@@ -366,10 +366,6 @@ button,
         }
     }
 
-    div#page-zones__template-widgets__logo-header-logo {
-        z-index: 999999;
-    }
-
     div#page-zones__template-widgets__companyname-companyname {
         margin-right: 70px;
     }
@@ -445,14 +441,12 @@ button,
     top: 0;
     width: 100%;
     z-index: 10002;
-    max-height: 100px;
 
     .container {
         margin: 0;
         max-width: 100%;
-        max-height: 100px;
 
-         @media @mobile-650px {
+        @media @mobile-650px {
             margin: 0;
         }
     }
@@ -897,7 +891,7 @@ div[data-widget-type="ecombasket"] {
         &.folder-open .navigation-list--children {
             display: none;
         }
-      
+
         // Activates hover state open
         &:hover .navigation-list--children {
             display: block;
@@ -909,7 +903,7 @@ div[data-widget-type="ecombasket"] {
 
 // On devices with touch enabled, hover is disabled and the JS toggle (.folder-open) is used
 .extendednavigation .navigation-item {
-  
+
     // Hides hover state
     &:hover .navigation-list--children {
         display: none;
