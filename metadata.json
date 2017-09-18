@@ -141,7 +141,7 @@
             "font-family": "\"Poppins\", \"Montserrat\", \"Trebuchet MS\", Helvetica, sans-serif",
             "font-size": "26px",
             "font-weight": "700",
-            "line-height": "34px",
+            "line-height": "30px",
             "color": "@color-swatch1",
             "letter-spacing": "4px"
         }

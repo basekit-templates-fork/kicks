@@ -32,6 +32,16 @@
         <!-- Dropdown Script -->
         <script src="{{asset('js/mq4-hover-shim.js')}}"></script>
 
+        <!-- Nav Menu Script -->
+        <script nonce="{{ numberUsedOnce }}">
+
+            // Toggles class open to add noscroll to body
+            $( ".navigation-toggle" ).click(function() {
+                $( "body" ).toggleClass( "noscroll" );
+            });
+
+        </script>
+
     	{% block scripts %}
     	{% endblock %}
 
