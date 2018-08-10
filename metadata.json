@@ -267,7 +267,7 @@
             "color__socialicons--icon--background--hover": "transparent"
         },
         "ecommerce": {
-            "color__ecomproduct-title--text": "@font-swatch4-color",
+            "color__ecomproduct-title--text": "@color-swatch4",
             "color__ecomproduct-price--text": "@color-swatch2"
         },
         "blog": {
