@@ -362,7 +362,7 @@ button,
     }
 
     div#page-zones__template-widgets__companyname-companyname {
-        margin-right: 70px;
+        margin-right: 40px;
     }
 
 
@@ -420,7 +420,7 @@ button,
 
 
 // Header styling if feature is present
-.feature-home [data-widget-type="feature"] + .template-header,
+.feature-home [data-widget-type="feature"]:not(.bk-tpl-hidden) + .template-header,
 .blogpost-page.has-image .template-header {
     background-color: transparent;
     border-bottom: none;
@@ -496,10 +496,6 @@ button,
         // Folder navigation colour
         &.folder ul .item-name {
             color: @color__navigation--text;
-
-            // &:hover {
-            //     color: @color__navigation--text--hover;
-            // }
         }
 
         // Folder dropdown arrow
@@ -528,10 +524,6 @@ button,
             background-color: @color__navigation--text;
         }
     }
-}
-
-.bk-tpl-hidden {
-    display: none;
 }
 
 
@@ -637,6 +629,7 @@ ul.navigation-list--children {
     margin: 0;
     min-width: 200px;
 }
+
 
 div[data-widget-type="extendednavigation"] {
     .flex(1 1 auto);
