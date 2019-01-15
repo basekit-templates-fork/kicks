@@ -326,8 +326,8 @@ button,
         padding: 15px 0 15px 15px;
     }
 
-    .navigation-item {
-        display: inline-block
+    .navigation-item:not(.navigation-item--child) {
+        display: inline-block;
     }
 
 
@@ -487,11 +487,7 @@ button,
             color: @color__navigation--text;
             font-size: bkscale(@font__navigation--font-size, 0.95);
 
-            // hover navigation colour
-            // &:hover {
-            //     color: @color__navigation--text--hover;
 
-            // }
             @media @tablet-860px {
                 color: @color__navigation--text--hover;
             }
@@ -631,7 +627,7 @@ ul.navigation-list--children {
 
 .navigation-list {
     margin: 0;
-    min-width: 200px;
+    min-width: 250px;
 }
 
 
@@ -896,18 +892,6 @@ div[data-widget-type="ecombasket"] {
         .navigation-item.folder ul .item-name:hover {
              color: @color__navigation--text--hover;
         }
-    }
-
-    .navigation-item .item-name:hover:before {
-        border-top: 15px solid transparent;
-        border-bottom: 15px solid transparent;
-        border-right: 16px solid white;
-        content: " ";
-        height: 0;
-        position: absolute;
-        width: 0;
-        right: -14%;
-        top: 16%;
     }
 }
 
