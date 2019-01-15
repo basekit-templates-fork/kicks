@@ -792,6 +792,12 @@ div[data-widget-type="ecombasket"] {
             top: 0;
             left: initial;
             width: 100%;
+
+            @media @tablet {
+                &:not(.navigation-list--children) {
+                    margin-top: 0;
+                }
+            }
         }
 
         .navigation-list .navigation-item {
