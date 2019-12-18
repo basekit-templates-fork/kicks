@@ -1,0 +1,89 @@
+
+// -----------------------------
+// Migration Styles
+// -----------------------------
+
+
+#migrated-site {
+
+
+    // Stylesheet overrides
+    // -----------------------------
+    
+    
+    div[role="main"] .container {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    
+    div[role="main"] {
+        padding: 0;
+    }
+    
+    
+    .row-overlay {
+        
+        &:before {
+            left: -1em;
+        }
+        
+        &:after {
+           right: -1em; 
+        }
+    }
+    
+
+
+
+    // Migration styles
+    // -----------------------------
+    
+    
+    // Applies spacing to widgets to mimic container width
+    .empty-zone,
+    #page-zones__main:empty,
+    #page-zones__main > .widget:not([data-name="row"]),
+    .row:not(.row--width-no-padding) .row__container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+        width: ~"calc(100% - 2em)";
+    }
+    
+
+    // Adds spacing to a section when a widget follows it
+    #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]) + [data-name="row"]:not(:last-child),
+    &.edit #page-zones__main-overlay + .widget:not([data-name="row"]),
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 20px;
+    }
+    
+    
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not([data-name="row"]):first-child {
+        margin-top: 5em;
+        
+        @media @mobile {
+            margin-top: 2em;
+        }
+    }
+
+    
+    // Move spacing to last widget in the main zone (not sections)
+    #page-zones__main > .widget:not([data-name="row"]):last-child {
+        margin-bottom: 5em;
+        
+        @media @mobile {
+            margin-bottom: 2em;
+        }
+    }
+    
+    
+    [data-name="row"] .column .widget,
+    [data-name="row"] .widget:only-child { 
+        margin-bottom: 0;
+    }
+}

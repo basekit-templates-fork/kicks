@@ -16,7 +16,7 @@
     	{% include basekit.headScript %}
     </head>
 
-    <body class="{{ page.backgroundClass }}">
+    <body {{ isV10sSite ? 'id="migrated-site"' : '' }} class="{{ page.backgroundClass }}">
 
     	{% block content %}
     	{% endblock %}
