@@ -1078,8 +1078,8 @@ form.ecomproductslist__form {
 //  4. Ecommerce Single Product
 // -----------------------------
 
-[data-name="ecomproduct"],
-[data-widget-type="ecomproduct"] {
+.widget[data-name="ecomproduct"],
+.widget[data-widget-type="ecomproduct"] {
 	margin: 0 auto;
 	max-width: 1200px;
 }
@@ -1623,5 +1623,12 @@ form.ecomproductslist__form {
 				color: @font-swatch6-color-hover;
 			}
 		}
+	}
+}
+
+.summary-table .cell--price,
+.summary-table .cell--total {
+	@media @mobile-650px {
+		width: 100%;
 	}
 }
