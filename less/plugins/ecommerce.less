@@ -1626,9 +1626,32 @@ form.ecomproductslist__form {
 	}
 }
 
-.summary-table .cell--price,
-.summary-table .cell--total {
-	@media @mobile-650px {
-		width: 100%;
+.summary-table {
+
+	.cell--image {
+		width: 20%;
+
+		@media @mobile-650px {
+			width: 100%;
+		}
+	}
+
+
+	.cell--title {
+		width: 35%;
+
+		@media @mobile-650px {
+			width: 100%;
+		}
+	}
+
+	.cell--quantity,
+	.cell--price,
+	.cell--total {
+		width: 15%;
+
+		@media @mobile-650px {
+			width: 100%;
+		}
 	}
 }
